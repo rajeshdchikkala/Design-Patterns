@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.rajesh;
+package com.rajesh.singletondp;
 
 /**
  * @author rajesh

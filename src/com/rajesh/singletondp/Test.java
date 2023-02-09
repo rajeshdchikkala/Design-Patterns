@@ -1,10 +1,10 @@
-package com.rajesh;
+package com.rajesh.singletondp;
 
 public class Test {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-	//	Singleton s=new Singleton(); //we are gtting error as wemade constructor as private.
+	//	Singleton s=new Singleton(); //we are getting error as we made constructor as private.
 	//	Singleton s1=new Singleton();
 		
 		Singleton s=Singleton.getInstance();
