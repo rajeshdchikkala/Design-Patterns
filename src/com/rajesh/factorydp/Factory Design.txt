@@ -1,0 +1,31 @@
+1) Factory Design pattern is based on Encapsulation object oriented concept
+2) Factory method is used to create different object from factory often refereed as Item and it encapsulate the creation code. So instead of having object creation code on client side we encapsulate inside Factory method in Java.
+3) Factory design pattern is used to create objects or Class in Java and it provides loose coupling and high cohesion
+4) Factory should be an interface and clients first either creates factory or get factory which later used to create objects.
+5) A Factory Pattern or Factory Method Pattern says that just define an interface or abstract class for creating an object but let the subclasses decide which class to instantiate
+6)The Factory Method Pattern is also known asVirtual Constructor.
+
+**** Example of a static factory method in JDK ****
+Example of Factory method design pattern is valueOf() method which is there in String and wrapper classes like Integer and Boolean and used for type conversion i.e. from converting String to Integer or String to double in java..
+Some more examples of factory method design pattern from JDK is :
+valueOf() method which returns object created by factory equivalent to value of parameter passed.
+getInstance() method which creates instance of Singleton class.
+newInstance() method which is used to create and return new instance from factory method every time called.
+getType() and newType() equivalent of getInstance() and newInstance() factory method but used when factory method resides in separate class.
+
+example:
+
+create interface notification. create notify method
+create class SMSnotification and implement interface notification. which will implement notify
+create class emailnotification and implement interface notification. which will implement notify
+create class factory within this create method called createnotification(mode) where mode=sms or email
+
+Now say if i have to implement pushnotification . we just have to add new class as push notification. and we need to add code in factory class.
+
+Other Knowledge:
+list l= new AL();
+al l1= new al(); interface reference to child reference.
+
+abstract class uses:
+whenever you want to work with constructor then go for abstract class
+
