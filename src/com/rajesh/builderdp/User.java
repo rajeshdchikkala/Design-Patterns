@@ -1,5 +1,21 @@
 package com.rajesh.builderdp;
 
+/**
+ * 
+ * @author rajesh
+ * 
+ * Steps for creating builder design pattern
+ * 1)create class user with attributes and make them final (To achieve immutability) eg.first name ,last name, age, mobile
+ * 2)create get methods on attributes
+ * 3)create inner class with same attributes
+ * 4)create constructor of inner class with mandatory fields
+ * 5)create methods for optional fields eg. age and mobile in inner class
+ * 6)create constructor of actual class by passing parameter as inner class eg. UserBuilder ub
+ * 7)create build method in inner class eg. user build();
+ * 8)create tostring() method to get details of object.
+ *
+ */
+
 public class User {
 	//to make it immutable add final
 	final private String firstName;
@@ -35,6 +51,7 @@ public class User {
 	
 	//create inner class
 	static class UserBuilder{
+		//dont make below fields final as we will not be able to update data assigned into these.
 		private String firstName;
 		private String lastName;
 		private int age;
@@ -70,7 +87,7 @@ public class User {
 		User u1=new User.UserBuilder("abcd", "efg").build();
 		System.out.println(u1);
 		System.out.println(" HashCode of u1 is "+u1.hashCode());
-		User u4=new User.UserBuilder("abcd", "efg").build();
+		User u4=new User.UserBuilder("hij", "klm").build();
 		System.out.println(u4);
 		System.out.println(" HashCode of u4 is "+u4.hashCode());
 		User u2=new User.UserBuilder("nop", "qrst").age(15).build();
