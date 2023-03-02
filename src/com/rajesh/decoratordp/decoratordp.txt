@@ -1,2 +1,14 @@
 problems solved by decorator:
 
+if we want to apply new feature to application without impacting the existing featurewe use decorator pattern.
+
+eg. in insuarance , we have basic plan. on top of that if person wants to add some more benefits then person will avail either
+Accidental or critical benefits.
+Some people can go for only accidental and base plan then they have to pay only for accidental and basic plan.
+Some people can go for only basic plan.
+
+So this can be achieved using decorator DP.
+
+Procedure to create Decorator Design Patterns:
+1)
+
